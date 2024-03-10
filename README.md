@@ -1,7 +1,7 @@
 # make-it-short
 Make it short is a URL Shortener project
 
-## High level architecture
+## High-level architecture
 
 The project will work on the basic concept of routing. The user registers the URL in the make-it-short platform, and we use a unique code to save that URL. When a response comes to the make-it-short server, we use the unique code to redirect the user to the original URL.
 
@@ -38,7 +38,7 @@ We will use the following tech stack to build the project:
 ### User Routes
 
 - POST /user/register (Register a user) (Public)
-- POST /user/login (Login a user) (Public)
+- POST /user/login (Log in a user) (Public)
 
 ### URL Table
 - id (Primary Key) (UUID)
@@ -71,9 +71,9 @@ We will use the following tech stack to build the project:
 
 ## Future Scope
 - User can set the custom short URL
-- User can see the analytics of the short URL
+- Users can see the analytics of the short URL
 - User can see the QR code of the short URL
 - User can see the preview of the short URL
-- User can see the social media preview of the short URL
+- Users can see the social media preview of the short URL
 - more...
 
