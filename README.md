@@ -6,6 +6,9 @@ Make it short is a URL Shortener project
 The project will work on the basic concept of routing. The user registers the URL in the make-it-short platform, and we use a unique code to save that URL. When a response comes to the make-it-short server, we use the unique code to redirect the user to the original URL.
 
 
+## Contribution
+- Check the [Contribution](CONTRIBUTING.md) guidelines
+
 ## Tech Stack
 
 We will use the following tech stack to build the project:
