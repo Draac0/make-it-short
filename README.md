@@ -21,6 +21,14 @@ We will use the following tech stack to build the project:
 ## How to run the project
 
 ### Backend
+Node version
+`v20.11.1`
+
+Install the Nest.js CLI globally by running the following command in your terminal:
+
+`
+npm i -g @nestjs/cli
+`
 
 
 ### Frontend
@@ -75,5 +83,5 @@ We will use the following tech stack to build the project:
 - User can see the QR code of the short URL
 - User can see the preview of the short URL
 - Users can see the social media preview of the short URL
-- more....
+- more...
 
