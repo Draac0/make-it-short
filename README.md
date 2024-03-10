@@ -21,6 +21,8 @@ We will use the following tech stack to build the project:
 ## How to run the project
 
 ### Backend
+`cd backend`
+
 Node version
 `v20.11.1`
 
@@ -32,7 +34,7 @@ npm i -g @nestjs/cli
 
 
 ### Frontend
-
+`cd frontend`
 
 ## Schema Design
 
