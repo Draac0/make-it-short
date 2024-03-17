@@ -4,6 +4,7 @@ Project bootstrapped with `create-next-app`.
 ## Getting Started
 
 ```bash
+yarn install
 yarn dev
 ```
 
