@@ -6,6 +6,7 @@ import { ConfigService } from '@/shared/services/config.service';
 import { AuthModule } from '@/modules/auth/auth.module';
 import { APP_GUARD } from '@nestjs/core';
 import { AuthGuard } from '@/guards/auth.guard';
+import { UrlModule } from './modules/url/url.module';
 
 @Module({
 	imports: [
@@ -18,6 +19,7 @@ import { AuthGuard } from '@/guards/auth.guard';
 		}),
 		AuthModule,
 		SharedModule,
+		UrlModule,
 	],
 	providers: [
 		{

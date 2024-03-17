@@ -4,26 +4,23 @@ import * as dotenv from 'dotenv';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
-  dotenv.config();
-  const app = await NestFactory.create(AppModule);
+	dotenv.config();
+	const app = await NestFactory.create(AppModule);
 
-  app.setGlobalPrefix('api');
+	// Setup Swagger
+	const config = new DocumentBuilder()
+		.setTitle('Make It Short Api')
+		.setDescription(
+			'Make it short is an url shortener service. This is the API documentation.',
+		)
+		.setVersion('1.0')
+		.addBearerAuth()
+		.addServer('http://localhost:3000')
+		.build();
+	const document = SwaggerModule.createDocument(app, config);
+	SwaggerModule.setup('documentation', app, document);
 
-  // Setup Swagger
-  const config = new DocumentBuilder()
-    .setTitle('Make It Short Api')
-    .setDescription(
-      'Make it short is an url shortener service. This is the API documentation.',
-    )
-    .setVersion('1.0')
-    .addBearerAuth()
-    .setBasePath('documentation')
-    .addServer('http://localhost:3000')
-    .build();
-  const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('documentation', app, document);
-
-  await app.listen(3000);
+	await app.listen(3000);
 }
 
 void bootstrap();
