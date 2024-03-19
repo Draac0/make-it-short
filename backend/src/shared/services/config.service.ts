@@ -6,7 +6,6 @@ import * as process from 'process';
 export class ConfigService {
 	get getPostgresConfig(): TypeOrmModuleOptions {
 		const entities = [__dirname + '/../../modules/**/*.entity{.ts,.js}'];
-		console.log(process.env.DB_NAME);
 		return {
 			database: process.env.DB_NAME,
 			type: 'postgres',
@@ -16,6 +15,8 @@ export class ConfigService {
 			entities,
 			username: process.env.DB_USERNAME,
 			password: process.env.DB_PASSWORD,
+			logger: 'debug',
+			logging: true,
 		};
 	}
 
